@@ -1,5 +1,7 @@
 # Mathematical Jargon Translator
 
+![image](https://github.com/Sinhala-Typing/mathematical-jargon-translator/assets/36286877/cc614d79-ef55-43b5-980a-9ecf09a0c147)
+
 **Translate Mathematical Jargon from Sinhala/Singlish to English**  
 *Tailored for Sri Lankan GCE A/L Terminology*
 
