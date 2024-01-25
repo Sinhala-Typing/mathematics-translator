@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sinhala Maths Terms Translator</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 50%;
+      margin-top: 20px;
+    }
+
+    th,
+    td {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <!-- <h2>Sinhala Maths Terms Translator</h2> -->
+
+    <input type="text" id="searchInput" placeholder="Enter Sinhala term..." />
+    <table id="resultsTable">
+      <tr>
+        <th>Sinhala Term</th>
+        <th>English Translation</th>
+      </tr>
+    </table>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <script>
+    const data = {
+      "sheshaya,sesha,ශේෂ": "Remainder",
+      "anukalanaya,අනුකලනය": "Integration",
+      "pramaya,prameya,ප්‍රමය,ප්‍රමේය": "Theory",
+      "awalakalana,අවකලන": "Differentiation",
+      // more
+    };
+
+    function search() {
+      const query = $("#searchInput").val().trim().toLowerCase();
+      const resultsTable = $("#resultsTable");
+
+      // clear
+      resultsTable.html("<tr><th>Sinhala Term</th><th>English Translation</th></tr>");
+
+      $.each(data, function (key, value) {
+        if (key.includes(query)) {
+          resultsTable.append(`<tr><td>${key}</td><td>${value}</td></tr>`);
+        }
+      });
+    }
+
+    $("#searchInput").keypress(function (e) {
+      search();
+    });
+
+  </script>
+</body>
+
+</html>
