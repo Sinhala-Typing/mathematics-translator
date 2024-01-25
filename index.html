@@ -30,13 +30,33 @@
       position: fixed;
       bottom: 0;
     }
+
+    table {
+      border-collapse: collapse;
+      width: 50%;
+      margin-top: 20px;
+    }
+
+    th,
+    td {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
   </style>
 </head>
 
 <body>
 
   <div class="container">
-    <h4>Mathematical Jargon Translator</h4>
+    <!-- <h4>Mathematical Jargon Translator</h4> -->
+    <br>
+    <img src="logo.png" alt="Mathematical Jargon Translator" width="50%">
+    <br>
     <p>
       Translate Mathematical Jargon from
       <b>Sinhala/Singlish to English</b>. Specially designed for Sri Lankan GCE A/L to
@@ -44,13 +64,14 @@
       for a comprehensive learning experience. eg: Ajantha Dissanayake Sir's class.
     </p>
     <input type="text" id="searchInput" placeholder="Enter Sinhala term..." />
-    <table id="resultsTable" class="striped highlight responsive-table">
+    <table id="resultsTable" class="striped highlight ">
       <tr>
         <th>Sinhala Term</th>
         <th>English Translation</th>
       </tr>
     </table>
   </div>
+
   <footer>Made by @hirushaadi</footer>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
