@@ -8,21 +8,27 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
   <style>
-    table {
-      border-collapse: collapse;
-      width: 50%;
-      margin-top: 20px;
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    th,
-    td {
-      border: 1px solid #dddddd;
-      text-align: left;
-      padding: 8px;
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
     }
 
-    th {
-      background-color: #f2f2f2;
+    footer {
+      text-align: center;
+      padding: 10px;
+      width: 100%;
+      position: fixed;
+      bottom: 0;
     }
   </style>
 </head>
@@ -30,26 +36,40 @@
 <body>
 
   <div class="container">
-    <!-- <h2>Sinhala Maths Terms Translator</h2> -->
-
+    <h4>Mathematical Jargon Translator</h4>
+    <p>
+      Translate Mathematical Jargon from
+      <b>Sinhala/Singlish to English</b>. Specially designed for Sri Lankan GCE A/L to
+      support English-medium students in understanding Sinhala terms. Consider exploring Sinhala medium classes
+      for a comprehensive learning experience. eg: Ajantha Dissanayake Sir's class.
+    </p>
     <input type="text" id="searchInput" placeholder="Enter Sinhala term..." />
-    <table id="resultsTable">
+    <table id="resultsTable" class="striped highlight responsive-table">
       <tr>
         <th>Sinhala Term</th>
         <th>English Translation</th>
       </tr>
     </table>
   </div>
+  <footer>Made by @hirushaadi</footer>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
   <script>
     const data = {
-      "sheshaya,sesha,ශේෂ": "Remainder",
+      "sheshaya,sesha,shesha,ශේෂ": "Remainder",
       "anukalanaya,අනුකලනය": "Integration",
       "pramaya,prameya,ප්‍රමය,ප්‍රමේය": "Theory",
       "awalakalana,අවකලන": "Differentiation",
+      "sarala rekaawa": "Straight Line",
+      "wurtha": "Circles",
+      "wurthaya": "Circle",
+      "kandaanka,candaanka,kandaanca,kandanka": "Coordinates",
+      "jaamithiya,gaamithiya,jamithiya,jaamithiya": "Geometery",
+      "anthakkandaya,anthak kandaya,antakandaya,anthakkandaya,antakkandaya": "Y-intercept",
+      "chedanaya,chedhanaya": "Intersect",
+      "binna baaga,bina baga,binna baga,bina baaga": "Partial Fractions"
       // more
     };
 
